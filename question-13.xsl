@@ -14,15 +14,15 @@
             <fo:layout-master-set>
                 <fo:simple-page-master master-name="premiere-page"
                     page-height="29.7cm" page-width="21cm"
-                    margin-top="1.5cm" margin-bottom="2cm"
-                    margin-left="2.5cm" margin-right="1cm">
+                    margin-top="1.5cm" margin-bottom="1.5cm"
+                    margin-left="3cm" margin-right="3cm">
                     <fo:region-body margin-top="10cm" margin-bottom="2.1cm" />
                 </fo:simple-page-master>
 
                 <fo:simple-page-master master-name="page-normale"
                     page-height="29.7cm" page-width="21cm"
-                    margin-top="1.5cm" margin-bottom="2cm"
-                    margin-left="2.5cm" margin-right="1cm">
+                    margin-top="1.5cm" margin-bottom="1.5cm"
+                    margin-left="1.5cm" margin-right="1.5cm">
                     <fo:region-body />
                     <fo:region-before extent="1.5cm" />
                     <fo:region-after extent="2cm" />
@@ -87,148 +87,135 @@
 
                 <xsl:for-each select="gare-depart">
                     <xsl:variable name="gareDepart" select="@nom" />
-                    <xsl:for-each select="gare-arrivee">
+                    <xsl:for-each
+                        select="gare-arrivee">
                         <xsl:variable name="gareArrivee" select="@nom" />
                         <fo:block font-size="14pt">
                             <xsl:value-of select="$gareDepart" />
                             <xsl:text> -> </xsl:text>
-                            <xsl:value-of select="$gareArrivee" /> 
+                            <xsl:value-of select="$gareArrivee" />
                         </fo:block>
 
-                        <xsl:for-each select="mesure">
-                            <fo:block font-size="12pt">
-                                <fo:table table-layout="fixed"
-                                            text-align="center"
-                                            space-before="1em"
-                                            width="100%">
-                                    <fo:table-column column-width="proportional-column-width(1)">
-                                    </fo:table-column>
-                                    <fo:table-column column-width="proportional-column-width(3)">
-                                    </fo:table-column>
-                                    <fo:table-header>
-                                    <fo:table-row>
-                                        <fo:table-cell number-columns-spanned="2"
-                                                    border="0.5pt solid #CCCCCC"
-                                                    padding="2pt"
-                                                    color="#880000">
-                                        <fo:block>Introduction à XML</fo:block>
+
+
+                        <fo:block
+                            font-size="10pt">
+                            <fo:table table-layout="fixed"
+                                text-align="center"
+                                space-before="1em"
+                                keep-together.within-page="always"
+                                border-collapse="separate"
+                                border="solid 1pt black"
+                                width="100%">
+
+                                <fo:table-column column-width="proportional-column-width(1)" />
+                                <fo:table-column column-width="proportional-column-width(1)" />
+                                <fo:table-column column-width="proportional-column-width(1)" />
+                                <fo:table-column column-width="proportional-column-width(1)" />
+                                <fo:table-column column-width="proportional-column-width(1)" />
+                                <fo:table-column column-width="proportional-column-width(1)" />
+                                <fo:table-column column-width="proportional-column-width(1)" />
+                                <fo:table-header>
+                                    <fo:table-row background-color="#4472c4">
+                                        <fo:table-cell padding="4pt" border="1pt solid black">
+                                            <fo:block font-weight="bold">Année</fo:block>
+                                        </fo:table-cell>
+                                        <fo:table-cell padding="4pt" border="1pt solid black">
+                                            <fo:block font-weight="bold">Mois</fo:block>
+                                        </fo:table-cell>
+                                        <fo:table-cell padding="4pt" border="1pt solid black">
+                                            <fo:block font-weight="bold">Programmés</fo:block>
+                                        </fo:table-cell>
+                                        <fo:table-cell padding="4pt" border="1pt solid black">
+                                            <fo:block font-weight="bold">Ayant circulé</fo:block>
+                                        </fo:table-cell>
+                                        <fo:table-cell padding="4pt" border="1pt solid black">
+                                            <fo:block font-weight="bold">Annulés</fo:block>
+                                        </fo:table-cell>
+                                        <fo:table-cell padding="4pt" border="1pt solid black">
+                                            <fo:block font-weight="bold">En retard</fo:block>
+                                        </fo:table-cell>
+                                        <fo:table-cell padding="4pt" border="1pt solid black">
+                                            <fo:block font-weight="bold">Régularité</fo:block>
                                         </fo:table-cell>
                                     </fo:table-row>
-                                    </fo:table-header>
-                                    <fo:table-footer>
+                                </fo:table-header>
+                                <!-- <fo:table-footer>
                                     <fo:table-row>
-                                        <fo:table-cell number-columns-spanned="2"
-                                                    padding="2pt"
-                                                    color="#000088"
-                                                    font-size="8pt">
-                                        <fo:block>Cours "XML, Standards et Applications" © 2004 Daniel Muller</fo:block>
-                                        </fo:table-cell>
                                     </fo:table-row>
-                                    </fo:table-footer>
-                                    <fo:table-body>
-                                    <fo:table-row>
-                                        <fo:table-cell number-rows-spanned="3"
-                                                    border="0.5pt solid #CCCCCC"
-                                                    padding="2pt"
-                                                    display-align="center">
-                                        <fo:block>Eléments d'histoire</fo:block>
-                                        </fo:table-cell>
-                                        <fo:table-cell border="0.5pt solid #CCCCCC"
-                                                    padding="2pt">
-                                        <fo:block>A l'origine était SGML...               </fo:block>
-                                        </fo:table-cell>
-                                    </fo:table-row>
-                                    <fo:table-row>
-                                        <fo:table-cell border="0.5pt solid #CCCCCC"
-                                                    padding="2pt">
-                                        <fo:block>De SGML à XML</fo:block>
-                                        </fo:table-cell>
-                                    </fo:table-row>
-                                    <fo:table-row>
-                                        <fo:table-cell border="0.5pt solid #CCCCCC"
-                                                    padding="2pt">
-                                        <fo:block>La solution XML</fo:block>
-                                        </fo:table-cell>
-                                    </fo:table-row>
-                                    </fo:table-body>
-                                    <fo:table-body>
-                                    <fo:table-row>
-                                        <fo:table-cell number-rows-spanned="10"
-                                                    border="0.5pt solid #CCCCCC"
-                                                    padding="2pt"
-                                                    display-align="center">
-                                        <fo:block>XML en 10 points</fo:block>
-                                        </fo:table-cell>
-                                        <fo:table-cell border="0.5pt solid #CCCCCC"
-                                                    padding="2pt">
-                                        <fo:block>Une méthode pour structurer des données</fo:block>
-                                        </fo:table-cell>
-                                    </fo:table-row>
-                                    <fo:table-row>
-                                        <fo:table-cell border="0.5pt solid #CCCCCC"
-                                                    padding="2pt">
-                                        <fo:block>XML ressemble à HTML</fo:block>
-                                        </fo:table-cell>
-                                    </fo:table-row>
-                                    <fo:table-row>
-                                        <fo:table-cell border="0.5pt solid #CCCCCC"
-                                                    padding="2pt">
-                                        <fo:block>XML : du texte pas forcément lu... par des humains</fo:block>
-                                        </fo:table-cell>
-                                    </fo:table-row>
-                                    <fo:table-row>
-                                        <fo:table-cell border="0.5pt solid #CCCCCC"
-                                                    padding="2pt">
-                                        <fo:block>XML est verbeux, mais ce n'est pas un problème</fo:block>
-                                        </fo:table-cell>
-                                    </fo:table-row>
-                                    <fo:table-row>
-                                        <fo:table-cell border="0.5pt solid #CCCCCC"
-                                                    padding="2pt">
-                                        <fo:block>XML est une famille de technologies</fo:block>
-                                        </fo:table-cell>
-                                    </fo:table-row>
-                                    <fo:table-row>
-                                        <fo:table-cell border="0.5pt solid #CCCCCC"
-                                                    padding="2pt">
-                                        <fo:block>XML est une technologie récente, mais éprouvée</fo:block>
-                                        </fo:table-cell>
-                                    </fo:table-row>
-                                    <fo:table-row>
-                                        <fo:table-cell border="0.5pt solid #CCCCCC"
-                                                    padding="2pt">
-                                        <fo:block>XML fait passer HTML à XHTML</fo:block>
-                                        </fo:table-cell>
-                                    </fo:table-row>
-                                    <fo:table-row>
-                                        <fo:table-cell border="0.5pt solid #CCCCCC"
-                                                    padding="2pt">
-                                        <fo:block>XML est modulaire</fo:block>
-                                        </fo:table-cell>
-                                    </fo:table-row>
-                                    <fo:table-row>
-                                        <fo:table-cell border="0.5pt solid #CCCCCC"
-                                                    padding="2pt">
-                                        <fo:block>XML est le fondement de RDF et du Web Sémantique</fo:block>
-                                        </fo:table-cell>
-                                    </fo:table-row>
-                                    <fo:table-row>
-                                        <fo:table-cell border="0.5pt solid #CCCCCC"
-                                                    padding="2pt">
-                                        <fo:block>XML est libre de droits, indépendant des plates-formes et correctement supporté</fo:block>
-                                        </fo:table-cell>
-                                    </fo:table-row>
-                                    </fo:table-body>
-                                </fo:table>
-                            </fo:block>
-                        </xsl:for-each>
+                                </fo:table-footer> -->
+
+                                <fo:table-body>
+                                    <xsl:for-each select="mesure">
+                                        <xsl:variable name="backgroundColor">
+                                            <xsl:choose>
+                                                <xsl:when test="position() mod 2 = 0">#d9e1f2</xsl:when>
+                                                <xsl:otherwise>white</xsl:otherwise>
+                                            </xsl:choose>
+                                        </xsl:variable>
+                                      
+                                        <fo:table-row
+                                            background-color="{$backgroundColor}">
+                                            <fo:table-cell padding="4pt" border="1pt solid black">
+                                                <fo:block>
+                                                    <xsl:value-of select="@annee" />
+                                                </fo:block>
+                                            </fo:table-cell>
+                                            <fo:table-cell padding="4pt" border="1pt solid black">
+                                                <fo:block>
+                                                    <xsl:choose>
+                                                        <xsl:when test="@mois=01">Janvier</xsl:when>
+                                                        <xsl:when test="@mois=02">Février</xsl:when>
+                                                        <xsl:when test="@mois=03">Mars</xsl:when>
+                                                        <xsl:when test="@mois=04">Avril</xsl:when>
+                                                        <xsl:when test="@mois=05">Mai</xsl:when>
+                                                        <xsl:when test="@mois=06">Juin</xsl:when>
+                                                        <xsl:when test="@mois=07">Juillet</xsl:when>
+                                                        <xsl:when test="@mois=08">Août</xsl:when>
+                                                        <xsl:when test="@mois=09">Septembre</xsl:when>
+                                                        <xsl:when test="@mois=10">Octobre</xsl:when>
+                                                        <xsl:when test="@mois=11">Novembre</xsl:when>
+                                                        <xsl:when test="@mois=12">Décembre</xsl:when>
+                                                    </xsl:choose>
+                                                </fo:block>
+                                            </fo:table-cell>
+                                            <fo:table-cell padding="4pt" border="1pt solid black">
+                                                <fo:block>
+                                                    <xsl:value-of select="@trains-prevus" />
+                                                </fo:block>
+                                            </fo:table-cell>
+                                            <fo:table-cell padding="4pt" border="1pt solid black">
+                                                <fo:block>
+                                                    <xsl:value-of select="@trains-ok" />
+                                                </fo:block>
+                                            </fo:table-cell>
+                                            <fo:table-cell padding="4pt" border="1pt solid black">
+                                                <fo:block>
+                                                    <xsl:value-of select="@annules" />
+                                                </fo:block>
+                                            </fo:table-cell>
+                                            <fo:table-cell padding="4pt" border="1pt solid black">
+                                                <fo:block>
+                                                    <xsl:value-of select="@retards" />
+                                                </fo:block>
+                                            </fo:table-cell>
+                                            <fo:table-cell padding="4pt" border="1pt solid black">
+                                                <fo:block>
+                                                    <xsl:value-of select="@regularite" />
+                                                </fo:block>
+                                            </fo:table-cell>
+                                        </fo:table-row>
+                                    </xsl:for-each>
+                                </fo:table-body>
+                            </fo:table>
+                        </fo:block>
                     </xsl:for-each>
                 </xsl:for-each>
             </fo:flow>
         </fo:page-sequence>
 
         <xsl:apply-templates></xsl:apply-templates>
-        
+
     </xsl:template>
 
 </xsl:stylesheet>
