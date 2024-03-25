@@ -16,7 +16,6 @@
 
             <xsl:apply-templates></xsl:apply-templates>
 
-
         </fo:root>
     </xsl:template>
 
@@ -25,11 +24,15 @@
         <xsl:variable name="axe" select="@nom" />
         <fo:page-sequence master-reference="page-unique">
             <fo:title>
-                <xsl:value-of select="$axe" />
+                <xsl:text>
+                    <xsl:value-of select="$axe" />
+                </xsl:text>
             </fo:title>
             <fo:flow flow-name="xsl-region-body">
-                <fo:block>Axe <xsl:value-of
-                        select="$axe" /></fo:block>
+                <fo:block font-size="18pt">
+                    <xsl:text>Axe </xsl:text>
+                    <xsl:value-of select="$axe" />
+                </fo:block>
             </fo:flow>
         </fo:page-sequence>
         <xsl:apply-templates></xsl:apply-templates>
