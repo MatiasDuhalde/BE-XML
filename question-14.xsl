@@ -103,6 +103,7 @@
                             <fo:table table-layout="fixed"
                                 text-align="center"
                                 space-before="1em"
+                                space-after="1em"
                                 border-collapse="separate"
                                 border="solid 1pt black"
                                 width="100%">
@@ -208,6 +209,38 @@
                                     </xsl:for-each>
                                 </fo:table-body>
                             </fo:table>
+
+
+                            <xsl:for-each select="mesure">
+                                <xsl:sort select="@annee" data-type="number" order="ascending" />
+                                <xsl:sort
+                                    select="@mois" data-type="number" order="ascending" />
+                                <xsl:if
+                                    test="string-length(normalize-space(@commentaire)) > 0">
+                                    <fo:block font-size="7pt">
+                                        <fo:inline font-weight="bold">
+                                            <xsl:choose>
+                                                <xsl:when test="@mois=01">Janvier</xsl:when>
+                                                <xsl:when test="@mois=02">Février</xsl:when>
+                                                <xsl:when test="@mois=03">Mars</xsl:when>
+                                                <xsl:when test="@mois=04">Avril</xsl:when>
+                                                <xsl:when test="@mois=05">Mai</xsl:when>
+                                                <xsl:when test="@mois=06">Juin</xsl:when>
+                                                <xsl:when test="@mois=07">Juillet</xsl:when>
+                                                <xsl:when test="@mois=08">Août</xsl:when>
+                                                <xsl:when test="@mois=09">Septembre</xsl:when>
+                                                <xsl:when test="@mois=10">Octobre</xsl:when>
+                                                <xsl:when test="@mois=11">Novembre</xsl:when>
+                                                <xsl:when test="@mois=12">Décembre</xsl:when>
+                                            </xsl:choose>
+                                            <xsl:text> </xsl:text>
+                                            <xsl:value-of select="@annee" />
+                                        </fo:inline>
+                                        <xsl:text> - </xsl:text>
+                                        <xsl:value-of select="@commentaire" />
+                                    </fo:block>
+                                </xsl:if>
+                            </xsl:for-each>
                         </fo:block>
                     </xsl:for-each>
                 </xsl:for-each>
