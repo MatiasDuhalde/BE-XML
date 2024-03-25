@@ -1,0 +1,18 @@
+<regularite-tgv>
+    <axe nom="Nord">
+    </axe>
+    <gare-depart nom="PARIS NORD">
+    </gare-depart>
+    <gare-arrivee nom="DOUAI">
+    </gare-arrivee>
+    <mesure
+        annee="2014"
+        mois="03"
+        trains-prevus="196"
+        trains-ok="196"
+        annules="0"
+        retards="11"
+        regularite="94.4"
+        commentaire=""
+    />
+</regularite-tgv>

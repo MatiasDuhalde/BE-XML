@@ -1,0 +1,43 @@
+<!DOCTYPE regularite-tgv [
+    <!ELEMENT regularite-tgv (axe+)>
+
+    <!ELEMENT axe (gare-depart+)>
+    <!ATTLIST axe nom CDATA #REQUIRED>
+
+    <!ELEMENT gare-depart (gare-arrivee+)>
+    <!ATTLIST gare-depart nom CDATA #REQUIRED>
+
+    <!ELEMENT gare-arrivee (mesure+)>
+    <!ATTLIST gare-arrivee nom CDATA #REQUIRED>
+
+    <!ELEMENT mesure EMPTY>
+    <!ATTLIST mesure
+        annee CDATA #REQUIRED
+        mois CDATA #REQUIRED
+        trains-prevus CDATA #REQUIRED
+        trains-ok CDATA #REQUIRED
+        annules CDATA #REQUIRED
+        retards CDATA #REQUIRED
+        regularite CDATA #REQUIRED
+        commentaire CDATA #REQUIRED
+        >
+]>
+
+<regularite-tgv>
+    <axe nom="Nord">
+        <gare-depart nom="PARIS NORD">
+            <gare-arrivee nom="DOUAI">
+                <mesure
+                    annee="2014"
+                    mois="03"
+                    trains-prevus="196"
+                    trains-ok="196"
+                    annules="0"
+                    retards="11"
+                    regularite="94.4"
+                    commentaire=""
+                />
+            </gare-arrivee>
+        </gare-depart>
+    </axe>
+</regularite-tgv>
