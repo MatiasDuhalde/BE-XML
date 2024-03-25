@@ -1,0 +1,257 @@
+<!DOCTYPE regularite-tgv [
+  <!ELEMENT regularite-tgv (axe+)>
+
+  <!ELEMENT axe (gare-depart+)>
+  <!ATTLIST axe nom CDATA #REQUIRED>
+
+  <!ELEMENT gare-depart (gare-arrivee+)>
+  <!ATTLIST gare-depart nom CDATA #REQUIRED>
+
+  <!ELEMENT gare-arrivee (mesure+)>
+  <!ATTLIST gare-arrivee nom CDATA #REQUIRED>
+
+  <!ELEMENT mesure EMPTY>
+  <!ATTLIST mesure
+    annee CDATA #REQUIRED
+    mois CDATA #REQUIRED
+    trains-prevus CDATA #REQUIRED
+    trains-ok CDATA #REQUIRED
+    annules CDATA #REQUIRED
+    retards CDATA #REQUIRED
+    regularite CDATA #REQUIRED
+    commentaire CDATA #REQUIRED
+        >
+]>
+
+<?xml-stylesheet href="question-5.xsl" type="text/xsl"?>
+
+<regularite-tgv>
+  <axe nom="Nord">
+    <gare-depart nom="PARIS NORD">
+      <gare-arrivee nom="DOUAI">
+        <mesure annee="2014" mois="03" trains-prevus="196" trains-ok="196" annules="0" retards="11"
+          regularite="94.4" commentaire="" />
+        <mesure annee="2014" mois="04" trains-prevus="188" trains-ok="188" annules="0" retards="15"
+          regularite="92.0" commentaire="" />
+        <mesure annee="2014" mois="05" trains-prevus="194" trains-ok="194" annules="0" retards="32"
+          regularite="83.5" commentaire="" />
+        <mesure annee="2012" mois="09" trains-prevus="198" trains-ok="198" annules="0" retards="25"
+          regularite="87.4"
+          commentaire="Circulation fortement dégradée le 3 septembre par un incident important qui s'est produit sur la ligne à grande vitesse au niveau de la gare d'Arras (incident touchant les installations caténaires avec de lourdes conséquences en termes de retard sur les trains)." />
+      </gare-arrivee>
+      <gare-arrivee nom="LILLE">
+        <mesure annee="2014" mois="05" trains-prevus="620" trains-ok="619" annules="1" retards="52"
+          regularite="91.6" commentaire="" />
+      </gare-arrivee>
+    </gare-depart>
+  </axe>
+  <axe nom="Atlantique">
+    <gare-depart nom="LAVAL">
+      <gare-arrivee nom="PARIS MONTPARNASSE">
+        <mesure annee="2014" mois="03" trains-prevus="243" trains-ok="243" annules="0" retards="14"
+          regularite="94.2" commentaire="" />
+        <mesure annee="2014" mois="04" trains-prevus="236" trains-ok="236" annules="0" retards="7"
+          regularite="97.0" commentaire="" />
+        <mesure annee="2014" mois="06" trains-prevus="228" trains-ok="210" annules="18" retards="19"
+          regularite="91.0" commentaire="" />
+        <mesure annee="2014" mois="07" trains-prevus="218" trains-ok="218" annules="0" retards="23"
+          regularite="89.4"
+          commentaire="Le 9 la panne d'un train à Marcoussis, sur la Ligne à Grande Vitesse, qui retarde 28 TGV de 8 minutes à 1h35, le 10 un acte de malveillance affectant un train à St Léger, sur la Ligne à Grande Vitesse, retarde 43 TGV de 14 minutes à 4h30, du 14 au 24 des ralentissements consécutifs à des travaux en sortie de Laval ont entraîné des retards dans le sens Province/Paris, le 19 un accident de personne à Champagné retarde 26 TGV de 18min à 3h58.&#10;" />
+        <mesure annee="2011" mois="09" trains-prevus="228" trains-ok="228" annules="0" retards="6"
+          regularite="97.4" commentaire="" />
+        <mesure annee="2012" mois="09" trains-prevus="234" trains-ok="234" annules="0" retards="14"
+          regularite="94.0" commentaire="" />
+        <mesure annee="2013" mois="02" trains-prevus="222" trains-ok="222" annules="0" retards="10"
+          regularite="95.5" commentaire="" />
+        <mesure annee="2013" mois="04" trains-prevus="237" trains-ok="237" annules="0" retards="14"
+          regularite="94.1" commentaire="" />
+        <mesure annee="2011" mois="12" trains-prevus="243" trains-ok="243" annules="0" retards="29"
+          regularite="88.1" commentaire="" />
+        <mesure annee="2012" mois="01" trains-prevus="244" trains-ok="244" annules="0" retards="23"
+          regularite="90.6" commentaire="" />
+        <mesure annee="2012" mois="07" trains-prevus="227" trains-ok="227" annules="0" retards="9"
+          regularite="96.0" commentaire="" />
+        <mesure annee="2012" mois="08" trains-prevus="229" trains-ok="229" annules="0" retards="10"
+          regularite="95.6" commentaire="" />
+        <mesure annee="2014" mois="05" trains-prevus="235" trains-ok="235" annules="0" retards="16"
+          regularite="93.2" commentaire="" />
+        <mesure annee="2012" mois="04" trains-prevus="235" trains-ok="235" annules="0" retards="17"
+          regularite="92.8" commentaire="" />
+        <mesure annee="2014" mois="09" trains-prevus="219" trains-ok="219" annules="0" retards="17"
+          regularite="92.2" commentaire="" />
+        <mesure annee="2012" mois="12" trains-prevus="243" trains-ok="243" annules="0" retards="21"
+          regularite="91.4" commentaire="" />
+        <mesure annee="2013" mois="01" trains-prevus="239" trains-ok="239" annules="0" retards="32"
+          regularite="86.6" commentaire="" />
+        <mesure annee="2013" mois="03" trains-prevus="229" trains-ok="229" annules="0" retards="22"
+          regularite="90.4" commentaire="" />
+        <mesure annee="2014" mois="08" trains-prevus="225" trains-ok="225" annules="0" retards="9"
+          regularite="96.0" commentaire="" />
+        <mesure annee="2014" mois="10" trains-prevus="244" trains-ok="244" annules="0" retards="10"
+          regularite="95.9" commentaire="" />
+        <mesure annee="2014" mois="11" trains-prevus="228" trains-ok="228" annules="0" retards="17"
+          regularite="92.5" commentaire="" />
+        <mesure annee="2014" mois="12" trains-prevus="246" trains-ok="246" annules="0" retards="20"
+          regularite="91.9" commentaire="" />
+        <mesure annee="2015" mois="03" trains-prevus="241" trains-ok="241" annules="0" retards="14"
+          regularite="94.2" commentaire="" />
+        <mesure annee="2015" mois="05" trains-prevus="236" trains-ok="236" annules="0" retards="9"
+          regularite="96.2"
+          commentaire="Cette ligne a été retardée par : un accident de personne à Yvre-l'Evêque le 14/05 (15 TGV soit 1456 minutes), une disjonction sur la LGV le 25/05 (6 TGV soit 87 minutes), heurt d'un animal sur la LGV le 12/05 (30 TGV soit 1799 minutes) et heurt d'une voiture le 06/05 à Vitré (18 TGV soit 1704 minutes)" />
+        <mesure annee="2013" mois="06" trains-prevus="241" trains-ok="238" annules="3" retards="18"
+          regularite="92.4" commentaire="" />
+        <mesure annee="2013" mois="10" trains-prevus="247" trains-ok="246" annules="1" retards="37"
+          regularite="85.0" commentaire="" />
+        <mesure annee="2012" mois="10" trains-prevus="247" trains-ok="246" annules="1" retards="14"
+          regularite="94.3" commentaire="" />
+        <mesure annee="2013" mois="12" trains-prevus="246" trains-ok="245" annules="1" retards="25"
+          regularite="89.8"
+          commentaire="Panne d'un train de travaux sur la branche sud Bretagne (près de Lorient) avec un retard de 89 minutes sur le TGV 8780, heurt d'un sanglier par le TER 857605 et nombreux retards pour plusieurs trains dont les TGV 8052 et 8706 avec respectivement 76 et 56 minutes de retard au terminus, fortes intempéries." />
+        <mesure annee="2014" mois="01" trains-prevus="254" trains-ok="254" annules="0" retards="24"
+          regularite="90.6" commentaire="" />
+        <mesure annee="2013" mois="05" trains-prevus="246" trains-ok="245" annules="1" retards="14"
+          regularite="94.3" commentaire="" />
+        <mesure annee="2012" mois="11" trains-prevus="235" trains-ok="235" annules="0" retards="26"
+          regularite="88.9" commentaire="" />
+        <mesure annee="2011" mois="11" trains-prevus="229" trains-ok="226" annules="3" retards="32"
+          regularite="85.8" commentaire="" />
+        <mesure annee="2011" mois="10" trains-prevus="233" trains-ok="233" annules="0" retards="22"
+          regularite="90.6" commentaire="" />
+        <mesure annee="2013" mois="08" trains-prevus="230" trains-ok="230" annules="0" retards="20"
+          regularite="91.3" commentaire="" />
+        <mesure annee="2013" mois="09" trains-prevus="202" trains-ok="202" annules="0" retards="21"
+          regularite="89.6" commentaire="" />
+        <mesure annee="2012" mois="03" trains-prevus="246" trains-ok="246" annules="0" retards="17"
+          regularite="93.1" commentaire="" />
+        <mesure annee="2013" mois="07" trains-prevus="229" trains-ok="229" annules="0" retards="29"
+          regularite="87.3" commentaire="" />
+        <mesure annee="2012" mois="06" trains-prevus="237" trains-ok="237" annules="0" retards="13"
+          regularite="94.5" commentaire="" />
+        <mesure annee="2012" mois="02" trains-prevus="234" trains-ok="234" annules="0" retards="33"
+          regularite="85.9" commentaire="" />
+        <mesure annee="2012" mois="05" trains-prevus="245" trains-ok="245" annules="0" retards="21"
+          regularite="91.4" commentaire="" />
+        <mesure annee="2014" mois="02" trains-prevus="220" trains-ok="220" annules="0" retards="17"
+          regularite="92.3" commentaire="" />
+        <mesure annee="2015" mois="01" trains-prevus="219" trains-ok="219" annules="0" retards="13"
+          regularite="94.1" commentaire="" />
+        <mesure annee="2013" mois="11" trains-prevus="237" trains-ok="236" annules="1" retards="12"
+          regularite="94.9" commentaire="" />
+        <mesure annee="2015" mois="02" trains-prevus="217" trains-ok="217" annules="0" retards="24"
+          regularite="88.9" commentaire="" />
+        <mesure annee="2015" mois="04" trains-prevus="234" trains-ok="234" annules="0" retards="7"
+          regularite="97.0" commentaire="" />
+        <mesure annee="2015" mois="06" trains-prevus="228" trains-ok="228" annules="0" retards="17"
+          regularite="92.5"
+          commentaire="Cette OD a été touchée le 4 par un rail cassé couplé à un affaissement caténaire à la sortie de Paris (172 TGV; 7664mn), le 5 par diverses limitations de vitesses liées aux fortes chaleurs dont une à la sortie de Paris reduisant fortement le débit des trains (82TGV; 985mn), le 26 par la rupture d'un appareil de voie en sortie de ligne grande vitesse avant Le Mans (52TGV; 923mn), le 3 par l'arrêt de sécurité d'un train dans les tunnels avant Paris (22TGV; 1035mn); le 9 un dérangement d'installation sur la branche ouest de la ligne grande vitesse (18TGV; 169mn)" />
+      </gare-arrivee>
+    </gare-depart>
+    <gare-depart nom="ANGOULEME">
+      <gare-arrivee nom="PARIS MONTPARNASSE">
+        <mesure annee="2014" mois="03" trains-prevus="328" trains-ok="327" annules="1" retards="39"
+          regularite="88.1" commentaire="" />
+        <mesure annee="2012" mois="10" trains-prevus="345" trains-ok="342" annules="3" retards="77"
+          regularite="77.5"
+          commentaire="Les travaux de raccordement de la ligne à grande vitesse Sud-Europe-Atlantique à la ligne classique entre Bordeaux et Tours ont pu engendrer des retards sur nos trains. Par ailleurs un nombre important d'événements ont eu un fort impact : erreur d'appréciation d'un riverain qui à cru observer un défaut de fermeture des barrières d'un passage à niveau lors du passage d'un train le 5, problème affectant la signalisation ferroviaire près de Massy (91) le 6, alerte à la bombe à Angoulême le 11, ranche tombée sur le fil d'alimentation électrique (caténaire) suite à mauvaise manipulation d'une entreprise d'élagage impliquant la nécessité de stopper la circulations des trains dans les deux sens le 23." />
+        <mesure annee="2014" mois="07" trains-prevus="328" trains-ok="328" annules="0" retards="58"
+          regularite="82.3" commentaire="" />
+        <mesure annee="2012" mois="01" trains-prevus="353" trains-ok="353" annules="0" retards="52"
+          regularite="85.3" commentaire="" />
+        <mesure annee="2012" mois="07" trains-prevus="343" trains-ok="343" annules="0" retards="40"
+          regularite="88.3"
+          commentaire="Le 8 juillet, afin d'assurer la correspondance avec le TER 864527, le TGV 8448 est retenu en gare d'Angoulême environ 15 minutes." />
+        <mesure annee="2014" mois="08" trains-prevus="327" trains-ok="327" annules="0" retards="31"
+          regularite="90.5" commentaire="" />
+        <mesure annee="2014" mois="09" trains-prevus="316" trains-ok="315" annules="1" retards="38"
+          regularite="87.9" commentaire="" />
+        <mesure annee="2011" mois="09" trains-prevus="358" trains-ok="358" annules="0" retards="23"
+          regularite="93.6" commentaire="" />
+        <mesure annee="2012" mois="12" trains-prevus="335" trains-ok="335" annules="0" retards="33"
+          regularite="90.1" commentaire="" />
+        <mesure annee="2014" mois="11" trains-prevus="327" trains-ok="327" annules="0" retards="39"
+          regularite="88.1" commentaire="" />
+        <mesure annee="2012" mois="03" trains-prevus="359" trains-ok="358" annules="1" retards="57"
+          regularite="84.1" commentaire="Irrégularité est due essentiellement aux travaux." />
+        <mesure annee="2012" mois="02" trains-prevus="335" trains-ok="335" annules="0" retards="102"
+          regularite="69.6" commentaire="" />
+        <mesure annee="2014" mois="05" trains-prevus="324" trains-ok="322" annules="2" retards="28"
+          regularite="91.3" commentaire="" />
+        <mesure annee="2014" mois="06" trains-prevus="299" trains-ok="225" annules="74" retards="42"
+          regularite="81.3" commentaire="" />
+        <mesure annee="2014" mois="04" trains-prevus="320" trains-ok="320" annules="0" retards="21"
+          regularite="93.4" commentaire="" />
+        <mesure annee="2015" mois="01" trains-prevus="335" trains-ok="334" annules="1" retards="36"
+          regularite="89.2"
+          commentaire="La ligne a été impactée par des incidents externes dont un accident de personne à VIVONNE le 04/01 (3 TGV retardés de 1h34 à 3h40) ainsi que la divagation d’un veau le 07/01 entre ANGOULÊME et POITIERS (5 TGV de 24’ à 1h04). Un dérangement des installations au nord de CHATELLERAULT le 15/01 a également entraîné des retards (24 TGV de 12’ à 1h50) ainsi que la panne d’un TGV sur la Ligne Grande Vitesse le 23/01 à DANGEAU (41 TGV retardés de 11’ à 3h18) et la panne d’un TER le 28/01 au sud de POITIERS (10 TGV retardés de 18’ à 3h23)." />
+        <mesure annee="2012" mois="06" trains-prevus="350" trains-ok="350" annules="0" retards="57"
+          regularite="83.7"
+          commentaire="Quelques incidents ayant un fort impact sur la régularité des TGV." />
+        <mesure annee="2014" mois="10" trains-prevus="332" trains-ok="331" annules="1" retards="36"
+          regularite="89.1" commentaire="" />
+        <mesure annee="2013" mois="01" trains-prevus="349" trains-ok="349" annules="0" retards="50"
+          regularite="85.7" commentaire="" />
+        <mesure annee="2014" mois="12" trains-prevus="357" trains-ok="357" annules="0" retards="37"
+          regularite="89.6"
+          commentaire="La ligne a été affectée par des incidents externes dont un accident de personne d'abord près de Tours le 14/12 retarde près d'une vingtaine de TGV de 11' à 2h40; le 22/12 le heurt d'un sanglier sur la Ligne à Grande Vitesse près de St Arnoult retarde une trentaine de TGV (de 11min à 1h18).&#10;Enfin, le 25/12: un dérangement des installations entre Paris Montparnasse &amp; Massy retarde 32 TGV (25min à 2h38)." />
+        <mesure annee="2015" mois="03" trains-prevus="356" trains-ok="356" annules="0" retards="18"
+          regularite="94.9" commentaire="" />
+        <mesure annee="2015" mois="04" trains-prevus="345" trains-ok="343" annules="2" retards="26"
+          regularite="92.4" commentaire="" />
+        <mesure annee="2015" mois="05" trains-prevus="340" trains-ok="340" annules="0" retards="14"
+          regularite="95.9" commentaire="" />
+        <mesure annee="2013" mois="07" trains-prevus="357" trains-ok="357" annules="0" retards="63"
+          regularite="82.4"
+          commentaire="Fortes chaleurs les 7 et 8. Fortes intempéries les 26 et 27. Fuite de gazole d'un train de fret. Pannes de train. Heurt d'animal." />
+        <mesure annee="2012" mois="08" trains-prevus="343" trains-ok="343" annules="0" retards="50"
+          regularite="85.4" commentaire="" />
+        <mesure annee="2012" mois="11" trains-prevus="349" trains-ok="348" annules="1" retards="91"
+          regularite="73.9"
+          commentaire="Importants travaux de raccordement de la ligne à grande vitesse Sud-Europe-Atlantique à la ligne classique entre Bordeaux et Tours ainsi que des travaux de régénération des voies de la ligne à grande vitesse atlantique entre Courtalain et Vendôme." />
+        <mesure annee="2012" mois="09" trains-prevus="349" trains-ok="349" annules="0" retards="53"
+          regularite="84.8" commentaire="" />
+        <mesure annee="2013" mois="11" trains-prevus="334" trains-ok="333" annules="1" retards="46"
+          regularite="86.2" commentaire="" />
+        <mesure annee="2014" mois="01" trains-prevus="330" trains-ok="330" annules="0" retards="18"
+          regularite="94.5" commentaire="" />
+        <mesure annee="2013" mois="02" trains-prevus="321" trains-ok="321" annules="0" retards="30"
+          regularite="90.7" commentaire="" />
+        <mesure annee="2013" mois="12" trains-prevus="343" trains-ok="334" annules="9" retards="33"
+          regularite="90.1" commentaire="" />
+        <mesure annee="2013" mois="03" trains-prevus="326" trains-ok="326" annules="0" retards="46"
+          regularite="85.9" commentaire="" />
+        <mesure annee="2011" mois="12" trains-prevus="349" trains-ok="349" annules="0" retards="43"
+          regularite="87.7" commentaire="" />
+        <mesure annee="2011" mois="10" trains-prevus="358" trains-ok="358" annules="0" retards="67"
+          regularite="81.3" commentaire="" />
+        <mesure annee="2011" mois="11" trains-prevus="364" trains-ok="362" annules="2" retards="32"
+          regularite="91.2" commentaire="" />
+        <mesure annee="2013" mois="06" trains-prevus="341" trains-ok="332" annules="9" retards="29"
+          regularite="91.3" commentaire="" />
+        <mesure annee="2013" mois="08" trains-prevus="356" trains-ok="355" annules="1" retards="34"
+          regularite="90.4" commentaire="" />
+        <mesure annee="2013" mois="09" trains-prevus="302" trains-ok="302" annules="0" retards="44"
+          regularite="85.4" commentaire="" />
+        <mesure annee="2013" mois="10" trains-prevus="359" trains-ok="357" annules="2" retards="69"
+          regularite="80.7"
+          commentaire="Événements occasionnant des retards sur des TGV, souvent dans les deux sens de circulations : présence de ballast sur les rails, arbre tombé aux abords de la voie avec endommagement du pantographe d'un train (bras mécanique permettant l'alimentation électrique du train), incident caténaire à l'arrivée sur Paris, accident de personne, heurts d'animaux, problème d'alimentation de la caténaire." />
+        <mesure annee="2013" mois="04" trains-prevus="346" trains-ok="346" annules="0" retards="20"
+          regularite="94.2"
+          commentaire="Rame d'un TGV en panne au départ, fin des travaux de nuit à Bordeaux retardant les TGV du matin, accident de personne à Poitiers, acte de malveillance à Poitiers (gilet sur le fil d'alimentation électrique), panne d'un TER en ligne au nord de Bordeaux." />
+        <mesure annee="2013" mois="05" trains-prevus="355" trains-ok="354" annules="1" retards="32"
+          regularite="91.0" commentaire="" />
+        <mesure annee="2012" mois="05" trains-prevus="346" trains-ok="346" annules="0" retards="61"
+          regularite="82.4"
+          commentaire="Importants événements : le 2, panne d'un train fret ayant engendré des retards de 10 à 30 minutes sur 12 TGV et 2 iDTGV ; le 8, un problème de fermeture de portes sur un TGV ; le 17, panne d'un train de travaux ayant retardé 4 TGV de 10 à 20 minutes ; le 26, intervention des pompiers suite au malaise d'un voyageur (30 minutes de retard). Par ailleurs, les travaux de raccordement de la Ligne à Grande Vitesse Sud Europe Atlantique entre Paris et Bordeaux ont occasionné des retards." />
+        <mesure annee="2015" mois="02" trains-prevus="320" trains-ok="319" annules="1" retards="36"
+          regularite="88.7" commentaire="" />
+        <mesure annee="2012" mois="04" trains-prevus="348" trains-ok="348" annules="0" retards="53"
+          regularite="84.8"
+          commentaire="Ralentissements pour travaux de raccordement à la ligne grande vitesse Sud-Europe-Atlantique en construction entre Poitiers et St-Pierre-des-Corps." />
+        <mesure annee="2014" mois="02" trains-prevus="298" trains-ok="298" annules="0" retards="40"
+          regularite="86.6" commentaire="" />
+        <mesure annee="2015" mois="06" trains-prevus="328" trains-ok="326" annules="2" retards="46"
+          regularite="85.9" commentaire="" />
+      </gare-arrivee>
+    </gare-depart>
+  </axe>
+</regularite-tgv>
