@@ -3,7 +3,7 @@
     <xsl:template match="/regularite-tgv">
         <html>
             <head>
-                <link rel="stylesheet" type="text/css" href="question-5.css" />
+                <link rel="stylesheet" type="text/css" href="question-6.css" />
             </head>
             <body>
                 <h1>
