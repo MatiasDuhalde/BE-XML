@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="question-8.xsl" type="text/xsl"?>
+<random-tag my-attr="nimportequoi">
+    <subel>Quoi?</subel>
+    <another>What?</another>
+    <third>¿Qué?</third>
+</random-tag>
